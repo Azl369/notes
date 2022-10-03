@@ -151,12 +151,24 @@ lv_obj_add_event_cb(obj, event_cb, event_code, user_data);
 2. 回调函数的参数
 事件回调函数只有一个参数，这个参数对我们的作为非常大，现在的版本提供这些功能：
 	``static void my_event_cb(lv_event_t * event);``
-获取触发的事件代码：	``lv_event_code_t code = lv_event_get_code(e);``
-获取触发事件的对象：	``lv_obj_t * target = lv_event_get_target(e);``
-获取最初触发事件的对象(事件冒泡)： ``lv_obj_t * target = lv_event_get_current_target(e);``
-获取事件传递的用户数据：	``lv_event_get_user_data(e); ``
-获取使用 ``lv_obj_add_event_cb`` 传递的用户数据``lv_event_get_param(e);`` 
-获取使用 ``lv_event_send`` 传递的用户数据
+获取触发的事件代码：	
+``lv_event_code_t code = lv_event_get_code(e);``
+获取触发事件的对象：	
+``lv_obj_t * target = lv_event_get_target(e);``
+获取最初触发事件的对象(事件冒泡)：
+ ``lv_obj_t * target = lv_event_get_current_target(e);``
+获取事件传递的用户数据：	
+``lv_event_get_user_data(e); ``获取使用 ``lv_obj_add_event_cb`` 传递的用户数据``lv_event_get_param(e);`` 获取使用 ``lv_event_send`` 传递的用户数据
+
+3.事件冒泡
+
+如果对象启用了
+`` lv_obj_add_flag(obj, LV_OBJ_FLAG_EVENT_BUBBLE)``
+该对象的所有事件将会发送到该对象的父级
+如果父级也启用了 LV_OBJ_FLAG_EVENT_BUBBLE，那么事件继续发送到他的父级，依此类推.
+``lv_event_get_target(e);`` 获取触发事件的当前对象。
+``lv_event_get_current_target(e); ``获取事件冒泡的父对象
+
 
 
 
