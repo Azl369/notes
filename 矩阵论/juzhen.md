@@ -64,3 +64,44 @@ $$\varphi(A) = A^n+a_1A^{n-1}+ \cdots+a_{n-1}A+A= 0$$
 ### 对角矩阵   
 
 $n$阶矩阵可以相似对角化的条件是该矩阵有$n$个线性无关的特征向量（也被称为具有完备的特征向量系）
+
+
+### Jordan标准型
+Jordan 标准形的存在性、唯一性
+
+若
+
+$$J=\begin {bmatrix} J_1\\&J_2\\&&\ddots\\&&&J_s\end {bmatrix}$$
+是矩阵$A$的$Jordan$标准形,而
+$$K=\begin {bmatrix} J_{i_1}\\&J_{i_2}\\&&\ddots \\&&&J_{i_s}\end {bmatrix}$$
+
+其中$J_{i_1},J_{i_2},...,J_{i_s}
+$是$J_1,J_2,...,J_s
+$的一个排列，则$K$也是$A$的$Jordan$标准形
+
+除了相差 $Jordan $块的次序外，矩阵的 $Jordan$ 标准形是存在的、唯一的
+
+
+#### <font color=red>性质</font>
+1.  $A$ ~ $J$,$\lambda_{0}$是数,则对一切正整数$k$
+
+$$rank ((A-\lambda_0E)^k)=rank ((J-\lambda_0E)^k)
+$$
+
+2. $n\times n$ 矩阵$N=\begin {bmatrix} 0&1\\&0&\ddots\\&&\ddots&1\\&&&1\end {bmatrix}
+$
+则
+$$rank (N^{k-1})-rank (N^k)=\begin {cases} 1, 若 k≤n\\0, 若 k>n\end {cases}$$
+
+
+![](2022-10-08-18-36-39.png)
+
+## 两种特殊空间
+
+1. 欧式空间
+
+2. 酉空间
+
+
+
+
