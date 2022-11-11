@@ -144,3 +144,13 @@ $$
 todo 不变因子对矩阵的含义
 
 
+
+## 矩阵分解
+
+1. QR分解
+   
+   1.1 Given矩阵以及Given变换
+
+   1.2 Householder矩阵以及Householder变换
+![](2022-11-09-14-48-46.png)
+Hu=u,Hω=-ω。
