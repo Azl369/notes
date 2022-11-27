@@ -14,6 +14,10 @@
     Modelsim（做FPGA仿真用）
     putty 串口下载工具
 
+    Linux 驱动开发
+
+4. GHRD工程
+
 
 
 
